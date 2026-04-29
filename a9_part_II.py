@@ -21,7 +21,7 @@ def get_planet_radius(planet_name: str) -> str:
     infobox_text = clean_text(get_first_infobox_text(get_page_html(planet_name)))
     print(infobox_text)
     # TODO: fill this in
-    pattern = "Polar Radius (?P<radius>[\d.\n]+)"
+    pattern = "Polar Radius(?P<radius>[\d.\n]+)"
     error_text = "Page infobox has no polar radius information"
     match = get_match(infobox_text, pattern, error_text)
     return match.group("radius")
