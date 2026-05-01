@@ -18,6 +18,8 @@ def get_page_html(title: str) -> str:
     return WikipediaPage(title).html()
 
 
+
+
 def get_first_infobox_text(html: str) -> str:
     """Gets first infobox html from a Wikipedia page (summary box)
 
